@@ -11,6 +11,7 @@
 <body>
   <div class="body">
     <div class="container-back">
+
       <div class="container">
         <h1>Comprovante de Comissões</h1>
         <p>
@@ -19,10 +20,6 @@
           Apresenta o cálculo do valor total, discriminando os valores com e sem descontos, bem como um espaço para
           registro de acordos verbais entre as partes.
         </p>
-      </div>
-      <div class="container">
-        
-
         <h1>Termos de Comissão</h1>
 
         <section>
@@ -100,6 +97,9 @@
         </section>
       </div>
 
+
+
+
       <div class="no-print">
         <form id="comissaoForm" class="container"></form>
       </div>
@@ -115,22 +115,24 @@
 
       <div class="container" id="quebraLinha">
         <div>
-          <h2>Resumo dos Descontos Aplicados</h2>
+          <h1>Resumo dos Descontos Aplicados</h1>
           <p>Aqui será exibido o resumo do que foi solicitado e os descontos aplicados conforme negociado.</p>
           <div id="resumoDescontos">
             <div class="no-print">
-              <div class="resumo">
-                <h3>Pacotes disponíveis</h3>
-                <ul onclick="pacotesDisponiveisSelecao" id="pacotesDisponiveis"></ul>
+              <div class="resultado" id="resultado">
               </div>
             </div>
-            <div class="descricao-itens-comissao">
-              <h2>Descrição detalhada dos itens selecionados:</h2>
-              <p id="descricaoDetalhada"></p>
-            </div>
+
             <div class="resumo">
               <h2>Resumo dos serviços selecionados:</h2>
               <ul id="listaSelecionados"></ul>
+            </div>
+
+            <div class="no-print">
+              <div class="resumo">
+                <h3>Pacotes disponíveis</h3>
+                <ul id="pacotesDisponiveis"></ul>
+              </div>
             </div>
             <div class="descricao-itens-comissao">
               <h2>Descrição detalhada dos itens selecionados:</h2>
@@ -162,28 +164,13 @@
             oficial da transação.
           </p>
           <div class="no-print">
-            <div class="resultado">
-              <div class="label">Valor mínimo:</div>
-              <div class="value" id="totalMin"></div>
-            </div>
-            <div class="resultado">
-              <div class="label">Valor máximo:</div>
-              <div class="value" id="totalMax"></div>
-            </div>
-
-            <div class="resultado">
-              <div class="label">Valor total com pacote:</div>
-              <div class="value" id="totalComPacote"></div>
-            </div>
+            <p class="resultadoDetail">Total mínimo: <span id="totalMin"></span></p>
+            <p class="resultadoDetail">Total máximo: <span id="totalMax"></span></p>
           </div>
-          <div class="resultado">
-            <div class="label">Valor com desconto:</div>
-            <div class="value" id="fatorDesconto"></div>
-          </div>
-          <div class="resultado">
-            <div class="label">Valor final:</div>
-            <div class="value" id="precoFinal"></div>
-          </div>
+          <p class="resultadoDetail">Pacotes aplicados: <span id="pacotesAplicados"></span></p>
+          <p class="resultadoDetail">Total com pacotes: <span id="totalComPacote"></span></p>
+          <p class="resultadoDetail">Desconto manual: <span id="fatorDesconto"></span></p>
+          <p class="resultadoDetail">Preço final: <span id="precoFinal"></span></p>
 
         </section>
         <div class="no-print">

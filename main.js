@@ -3,6 +3,7 @@ const resultado = document.getElementById('resultado');
 const percentualInput = document.getElementById('percentual');
 const listaSelecionados = document.getElementById('listaSelecionados');
 
+
 let pacotes = [];
 
 Promise.all([
@@ -216,7 +217,7 @@ function atualizarCalculo() {
     .map(p => `${p.nome} (${p.desconto}% de desconto)`)
     .filter((v, i, a) => a.indexOf(v) === i);
 
-  document.getElementById('totalMin').textContent = `R$${totalMin.toFixed(2)}`;
+  resultado.innerHTML = document.getElementById('totalMin').textContent = `R$${totalMin.toFixed(2)}`;
   document.getElementById('totalMax').textContent = `R$${totalMax.toFixed(2)}`;
   document.getElementById('totalComPacote').textContent = `R$${totalComPacote.toFixed(2)}`;
   document.getElementById('fatorDesconto').textContent = `${pct.toFixed(2)}%`;
