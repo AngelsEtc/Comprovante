@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comprovante de Comissões</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="body">
+    <div class="container-back">
+      <div class="container">
+
+        <h1>Termos de Comissão</h1>
+
+        <section>
+          <h2>1. Solicitação de Comissão</h2>
+          <p>Todas as comissões devem ser solicitadas por mensagem direta ou formulário (se disponível).</p>
+          <p>Forneça uma descrição clara e detalhada do que deseja, incluindo referências visuais sempre que possível.
+          </p>
+          <p>Solicitações vagas ou com informações insuficientes podem gerar atrasos ou levar a interpretações criativas
+            por parte do artista.</p>
+        </section>
+
+        <section>
+          <h2>2. Preços e Pagamento</h2>
+          <p>Os preços seguem faixas pré-definidas conforme a tabela de valores disponível, podendo variar de acordo com
+            a
+            complexidade do pedido e quantidades selecionadas.</p>
+          <p>O cliente pode optar por aplicar um valor personalizado dentro da faixa sugerida, conforme indicado no
+            formulário.</p>
+          <p>Os preços não são negociáveis fora dos valores estipulados, exceto em casos especiais acordados com o
+            artista.</p>
+          <p>O pagamento deve ser feito antecipadamente ou dividido em 50% antes e 50% após a conclusão da arte, quando
+            o
+            valor total ultrapassar R$100.</p>
+          <p>Comissões de valor igual ou inferior a R$100 devem ser pagas integralmente antes do início do trabalho.</p>
+          <p>Formas de pagamento aceitas: Pix ou PayPal.</p>
+        </section>
+
+        <section>
+          <h2>3. Prazo de Entrega</h2>
+          <p>O prazo estimado será informado previamente, de acordo com a complexidade do pedido e a fila de espera.</p>
+          <p>O cliente será notificado sobre qualquer atraso imprevisto.</p>
+          <p>Pedidos com prazos curtos (urgentes) podem ter uma taxa adicional.</p>
+        </section>
+
+        <section>
+          <h2>4. Revisões</h2>
+          <p>Revisões estão incluídas apenas durante as etapas de esboço e rascunho.</p>
+          <p>Alterações significativas após a arte final ser aprovada não serão aceitas ou poderão ser cobradas
+            separadamente.</p>
+          <p>Revisões por erro do artista são realizadas sem custo adicional.</p>
+        </section>
+
+        <section>
+          <h2>5. Direitos Autorais e Uso</h2>
+          <p>O artista mantém todos os direitos autorais da obra, inclusive sobre artes comissionadas, salvo acordo
+            contratual por escrito.</p>
+          <p>O cliente recebe uma licença pessoal e não comercial para uso da arte (ex: perfis, banners, stream).</p>
+          <p>O uso comercial só é permitido se adquirido previamente com valor adicional (licença comercial).</p>
+          <p>O cliente não pode revender, modificar, remover a assinatura, utilizar IA ou NFTs, ou redistribuir a arte
+            sem
+            permissão formal.</p>
+          <p>O artista pode exibir a obra em portfólios, redes sociais e promoções, a menos que o cliente solicite
+            sigilo
+            previamente.</p>
+          <p>Para projetos com contrato (VTubers, marcas, jogos, etc.), os termos de uso, exclusividade, e direitos são
+            discutidos separadamente em documento formal.</p>
+        </section>
+
+        <section>
+          <h2>6. Cancelamento e Reembolso</h2>
+          <p>O cliente pode cancelar antes do início do trabalho e receberá reembolso total.</p>
+          <p>Cancelamentos após o início da obra podem gerar reembolso parcial, conforme o progresso.</p>
+          <p>Após a entrega final da arte, não há reembolso.</p>
+          <p>O artista também pode recusar ou cancelar comissões a qualquer momento, especialmente em casos de má
+            conduta,
+            valores incompatíveis ou temas com os quais não se sinta confortável. Nesse caso, haverá reembolso
+            proporcional.</p>
+        </section>
+
+        <section>
+          <h2>7. Conduta</h2>
+          <p>O cliente deve manter respeito e comunicação clara durante todo o processo.</p>
+          <p>Qualquer comportamento abusivo, ofensivo, insistente ou manipulativo resultará no cancelamento imediato da
+            comissão e bloqueio de contato.</p>
+        </section>
+      </div>
+
+
+      <div class="container">
+        <h1>Comprovante de Comissões</h1>
+        <p>
+          Documento que detalha os serviços de comissão solicitados, incluindo quantidades, valores aplicados, descontos
+          concedidos e pacotes promocionais utilizados.
+          Apresenta o cálculo do valor total, discriminando os valores com e sem descontos, bem como um espaço para
+          registro de acordos verbais entre as partes.
+        </p>
+      </div>
+
+      <div class="no-print">
+        <form id="comissaoForm" class="container"></form>
+      </div>
+      <div class="no-print">
+        <div class="container">
+          <div class="comissao">
+            <label for="percentual">Desconto manual aplicado(%): </label>
+            <input type="number" id="percentual" value="0" min="0" max="100" step="0.1" />%
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div>
+          <h2>Resumo dos Descontos Aplicados</h2>
+          <p>Aqui será exibido o resumo do que foi solicitado e os descontos aplicados conforme negociado.</p>
+          <div id="resumoDescontos">
+            <div class="no-print">
+              <div class="resultado" id="resultado">
+              </div>
+            </div>
+
+            <div class="resumo">
+              <h2>Resumo dos serviços selecionados:</h2>
+              <ul id="listaSelecionados"></ul>
+            </div>
+
+            <div class="no-print">
+              <div class="resumo">
+                <h3>Pacotes disponíveis</h3>
+                <ul onclick="pacotesDisponiveisSelecao" id="pacotesDisponiveis"></ul>
+              </div>
+            </div>
+            <div class="descricao-itens-comissao">
+              <h2>Descrição detalhada dos itens selecionados:</h2>
+              <p id="descricaoDetalhada"></p>
+            </div>
+          </div>
+          <div class="inline-row">
+            <h2>Cliente</h2>
+            <textarea id="acordoVerbal" placeholder="Cliente..."></textarea>
+            <h2>Artista</h2>
+            <textarea id="acordoVerbal" placeholder="Artista..."></textarea>
+          </div>
+          <h2>Acordo Verbal com o Cliente</h2>
+          <textarea id="acordoVerbal" placeholder="Digite aqui o acordo verbal com o cliente..."></textarea>
+        </div>
+        <section class="termo-aceite">
+          <h2>Termo de Aceite</h2>
+          <p>
+            Este documento foi gerado em <span id="data-hora-geracao"></span> e detalha todas as informações
+            referentes às comissões solicitadas, incluindo valores, descontos e acordos verbais firmados durante a
+            conversa entre cliente e artista.
+          </p>
+          <p>
+            Ao receber este comprovante, o cliente declara estar ciente e concordar com todos os termos e valores
+            apresentados, reconhecendo que o acordo foi estabelecido de forma clara e transparente.
+          </p>
+          <p>
+            O comprovante será enviado para o e-mail informado pelo cliente, garantindo a formalização e registro
+            oficial da transação.
+          </p>
+          <div class="no-print">
+            <p>Total mínimo: <span id="totalMin"></span></p>
+            <p>Total máximo: <span id="totalMax"></span></p>
+          </div>
+          <p>Pacotes aplicados: <span id="pacotesAplicados"></span></p>
+          <p>Total com pacotes: <span id="totalComPacote"></span></p>
+          <p>Desconto manual: <span id="fatorDesconto"></span></p>
+          <p class="precoFinal">Preço final: <span id="precoFinal"></span></p>
+
+        </section>
+        <div class="no-print">
+          <div class="botoes">
+            <button onclick="window.print()">Imprimir</button>
+            <button type="button" onclick="localStorage.removeItem('estadoComissao'); location.reload();">
+              Limpar
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer class="rodape">
+    <p>Este comprovante é gerado com base nas informações fornecidas pelo cliente e artista no momento da negociação.
+    </p>
+    <p>Em caso de dúvidas ou divergências, entre em contato diretamente com o artista responsável.</p>
+    <p class="copyright">&copy; 2025 — Comissão de Arte Digital | Todos os direitos reservados.</p>
+    <p class="contato">
+      Contato: <a href="mailto:exemplo@email.com">exemplo@email.com</a> |
+      <a href="https://instagram.com/usuario_artista" target="_blank">@usuario_artista</a>
+    </p>
+  </footer>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>

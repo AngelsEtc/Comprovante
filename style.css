@@ -1,0 +1,425 @@
+:root {
+
+  --color-primary: #E4F9FB;
+  --color-secondary: #3F8FBC;
+  --color-tertiary: #0C3C6A;
+  --color-white: #D9D9D9;
+
+
+  --color-linear-gradient: linear-gradient(175deg, var(--color-primary) 0%, var(--color-secondary) 0%, var(--color-tertiary) 87%);
+
+
+  --border: var(--color-primary) 1px solid;
+  --border-radius-container: 1em;
+  --border-radius-box: 8px;
+  --border-radius-input: 6px;
+
+
+  --font-size-title: 1.4rem;
+  --font-size-subtitle: 0.8rem;
+  --font-size-text: 0.8rem;
+  --font-size-small: 0.9rem;
+
+
+  --padding-default: 0.6em;
+  --padding-horizontal: 20px;
+  --margin-bottom-section: 20px;
+  --gap-default: 8px;
+  --input-height: 2.4em;
+  --input-width-number: 60px;
+
+}
+
+* {
+  font-size: var(--font-size-text);
+}
+
+
+body {
+  background: var(--color-linear-gradient);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+.body {
+  width: 70em;
+  font-family: "Inter", sans-serif;
+  font-size: var(--font-size-text);
+  color: var(--color-primary);
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+hr {
+  padding: 0;
+  background-color: var(--color-primary);
+  width: 100%;
+  height: 1px;
+  border: 0;
+  margin: 0 0 20px 0;
+}
+
+
+.container {
+  background: var(--color-tertiary);
+  border-radius: var(--border-radius-container);
+  border: var(--border);
+  padding: 15px;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  font-size: var(--font-size-title);
+  line-height: 1.3;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+#comissaoForm {
+  width: auto;
+}
+
+.item {
+  padding: var(--padding-default);
+  height: 3.3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+#pacotesDisponiveis li {
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#pacotesDisponiveis li:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+label {
+  cursor: pointer;
+  flex: 1;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid var(--color-primary);
+  border-radius: 3px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, border-color 0.3s;
+  flex-shrink: 0;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--color-white);
+  border-color: var(--color-secondary);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+.item label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-text);
+}
+
+input[type="checkbox"]:disabled::after {
+  content: "✕";
+  font-size: 0.7rem;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+.item.disabled label {
+  color: var(--color-secondary);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.quantidade {
+  height: var(--input-height);
+  width: var(--input-width-number);
+  text-align: center;
+  line-height: var(--input-height);
+  transition: border-color 0.3s ease;
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--border-radius-input);
+  background-color: transparent;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-width: 60px;
+  max-width: 90px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.quantidade:enabled {
+  border-color: var(--color-secondary);
+}
+
+.quantidade:disabled {
+  color: var(--color-white);
+  cursor: not-allowed;
+}
+
+.precoCustomizado {
+  height: var(--input-height);
+  width: 180px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--border-radius-input);
+  background-color: transparent;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-width: 90px;
+  max-width: 150px;
+}
+
+.precoCustomizado:enabled {
+  border-color: var(--color-secondary);
+}
+
+.precoCustomizado:disabled {
+  color: var(--color-white);
+  cursor: not-allowed;
+}
+
+.comissao {
+  display: flex;
+  padding: var(--padding-default);
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-default);
+}
+
+.comissao label {
+  font-size: var(--font-size-subtitle);
+}
+
+.comissao input[type="number"] {
+  width: var(--input-width-number);
+  padding: 0.4em 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--color-white);
+  border-radius: var(--border-radius-input);
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.comissao input[type="number"]:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  padding: var(--padding-default) var(--padding-horizontal);
+}
+
+.acoes button {
+  padding: 0.4em 0.8em;
+  border: none;
+  border-radius: var(--border-radius-input);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.acoes button:hover {
+  background-color: var(--color-tertiary);
+}
+
+.resultado {
+  padding: var(--padding-default) var(--padding-horizontal);
+  border-radius: var(--border-radius-box);
+  max-width: 600px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: var(--margin-bottom-section);
+  line-height: 1.4;
+}
+
+.precoFinal {
+  font-weight: 900;
+}
+
+.resumo {
+  max-width: 600px;
+  width: 100%;
+  padding: var(--padding-default) var(--padding-horizontal);
+  border-radius: var(--border-radius-box);
+}
+
+.resumo h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: var(--font-size-subtitle);
+}
+
+.resumo ul {
+  align-content: center;
+  list-style-type: disc;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: var(--font-size-small);
+}
+
+.rodape {
+  width: 100%;
+  margin-top: 4em;
+  padding: 2em 1em;
+  text-align: center;
+  background-color: var(--color-tertiary);
+  border-top: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: var(--font-size-small);
+  border-radius: 0 0 var(--border-radius-container) var(--border-radius-container);
+}
+
+.rodape .titulo {
+  font-weight: 600;
+  font-size: var(--font-size-subtitle);
+  margin-bottom: 0.8em;
+  color: var(--color-primary);
+}
+
+.rodape p {
+  margin: 0.4em 0;
+}
+
+.rodape .copyright {
+  margin-top: 1em;
+  font-size: 0.8em;
+  opacity: 0.9;
+}
+
+.rodape .contato a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.rodape .contato a:hover {
+  color: var(--color-secondary);
+}
+
+#acordoVerbal {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  font-family: inherit;
+  font-size: var(--font-size-text);
+}
+
+#resumoDescontos {
+  padding: 1em;
+  border-radius: 8px;
+  color: var(--color-primary);
+}
+
+
+.inline-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inline-row h2 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.inline-row textarea {
+  resize: vertical;
+  height: auto;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+#acordoVerbal {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  padding: 0.8em;
+  max-height: 200px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.botoes {
+  display: flex;
+  height: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  form#comissaoForm,
+  .comissao,
+  .resultado,
+  .resumo {
+    padding: 0.6em;
+  }
+
+  .acoes {
+    padding: 0.6em;
+  }
+}

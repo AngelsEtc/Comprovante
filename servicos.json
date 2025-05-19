@@ -1,0 +1,122 @@
+[
+    {
+        "id": "1",
+        "nome": "Emote Estático (normal)",
+        "min": 15,
+        "max": 25,
+        "desativado": false,
+        "descricao_basica": "Desenho pequeno, sem animação, com expressão simples e fundo transparente."
+    },
+    {
+        "id": "2",
+        "nome": "Emote Animados",
+        "min": 30,
+        "max": 50,
+        "desativado": false,
+        "descricao_basica": "Emote com movimento básico, como piscar, sorrir ou pequenas ações simples em loop."
+    },
+    {
+        "id": "3",
+        "nome": "Ícone para Perfil",
+        "min": 20,
+        "max": 40,
+        "desativado": false,
+        "descricao_basica": "Ilustração de rosto ou busto com detalhes e fundo transparente, ideal para uso em redes sociais."
+    },
+    {
+        "id": "4",
+        "nome": "Fundo simples",
+        "min": 5,
+        "max": 10,
+        "desativado": false,
+        "descricao_basica": "Fundo com cor sólida ou gradiente básico, sem muitos detalhes."
+    },
+    {
+        "id": "5",
+        "nome": "Fundo decorativo básico",
+        "min": 10,
+        "max": 20,
+        "desativado": false,
+        "descricao_basica": "Fundo com elementos simples como padrões, formas geométricas ou efeitos leves."
+    },
+    {
+        "id": "6",
+        "nome": "Fundo ilustrado",
+        "min": 30,
+        "max": 80,
+        "desativado": false,
+        "descricao_basica": "Fundo detalhado, com elementos desenhados que complementam o personagem ou tema."
+    },
+    {
+        "id": "7",
+        "nome": "Modelo Chibi para Rig (Live2D)",
+        "min": 80,
+        "max": 200,
+        "desativado": false,
+        "descricao_basica": "Personagem em estilo chibi desenhado em camadas para rigging básico em Live2D."
+    },
+    {
+        "id": "8",
+        "nome": "Roupa extra",
+        "min": 40,
+        "max": 100,
+        "desativado": false,
+        "descricao_basica": "Uma roupa adicional para o personagem, desenhada e preparada para uso."
+    },
+    {
+        "id": "9",
+        "nome": "Cabelo extra",
+        "min": 20,
+        "max": 60,
+        "desativado": false,
+        "descricao_basica": "Estilo ou cor de cabelo alternativa, desenhada para o personagem."
+    },
+    {
+        "id": "10",
+        "nome": "Expressão extra",
+        "min": 5,
+        "max": 15,
+        "desativado": false,
+        "descricao_basica": "Uma expressão facial adicional para o personagem ou emote."
+    },
+    {
+        "id": "11",
+        "nome": "Item/acessório (ex: chapéu)",
+        "min": 5,
+        "max": 15,
+        "desativado": false,
+        "descricao_basica": "Um acessório simples, como chapéu, óculos ou colar, desenhado para adicionar ao personagem."
+    },
+    {
+        "id": "12",
+        "nome": "Camadas extras para rig",
+        "min": 10,
+        "max": 40,
+        "desativado": false,
+        "descricao_basica": "Camadas adicionais para melhorar a movimentação do rig em Live2D."
+    },
+    {
+        "id": "13",
+        "nome": "Rig Live2D (básico)",
+        "min": 100,
+        "max": 250,
+        "desativado": false,
+        "descricao_basica": "Configuração básica para o modelo animar movimentos simples de cabeça, olhos e boca."
+    },
+    {
+        "id": "14",
+        "nome": "Personalizado — Sob consulta",
+        "min": 0,
+        "max": 0,
+        "desativado": true,
+        "descricao_basica": "Serviço feito sob medida, com detalhes negociados diretamente."
+    },
+    {
+        "id": "15",
+        "nome": "Direito Comercial — Sob consulta",
+        "min": 0,
+        "max": 0,
+        "desativado": true,
+        "descricao_basica": "Licença para uso comercial do material, negociada conforme necessidade."
+    }
+]
