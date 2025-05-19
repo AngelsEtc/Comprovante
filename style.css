@@ -1,8 +1,8 @@
 :root {
 
-  --color-primary: #E4F9FB;
-  --color-secondary: #3F8FBC;
-  --color-tertiary: #0C3C6A;
+  --color-primary: #1b1b1b;
+  --color-secondary: #979797;
+  --color-tertiary: #b3b3b3;
   --color-white: #D9D9D9;
 
 
@@ -96,6 +96,11 @@ h1 {
   gap: 20px;
 
   flex-wrap: wrap;
+}
+
+#quebraLinha {
+  page-break-before: always;
+  break-before: page;
 }
 
 #pacotesDisponiveis li {
@@ -267,14 +272,30 @@ input[type="checkbox"]:disabled::after {
 }
 
 .resultado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: var(--padding-default) var(--padding-horizontal);
   border-radius: var(--border-radius-box);
-  max-width: 600px;
-  width: 100%;
+  border: var(--border);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: var(--margin-bottom-section);
-  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+.resultado .label {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.resultado .value {
+  font-weight: 900;
+  color: var(--color-primary);
+  min-width: 90px;
+  text-align: right;
 }
 
 .precoFinal {
